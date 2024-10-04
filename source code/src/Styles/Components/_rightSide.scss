@@ -1,0 +1,51 @@
+.right-side{
+    @include flex(space-between,center,column,10px);
+    background-color: $rightSide;
+    width: 75%;
+    min-height: 100%;
+    padding: 10px;
+    border-top-right-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+
+    @include mq(mobile){
+        width: 100%;
+        background-color:  #999966;
+        border-radius: 0;
+    }
+
+    .header{
+        @include flex(center,center,null,null);
+        font-size: 1.5rem;
+        font-weight: bold;
+        padding: 5px;
+        width: 100%;
+
+        @include mq(mobile){
+            font-size: 2rem;
+        }
+
+        @include mq(desktopS){
+            font-size: 2rem;
+        }
+
+        @include mq(desktopM){
+            font-size: 2.2rem;
+        }
+
+        @include mq(desktopL){
+            font-size: 2.4rem;
+        }
+
+        @include mq(4k){
+            font-size: 2.6rem;
+        }
+    }
+
+    .hourly-header{
+        padding-bottom: 10px;
+    }
+
+    .highlights-header{
+        padding-top: 10px;
+    }
+}

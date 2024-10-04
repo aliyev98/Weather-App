@@ -1,0 +1,373 @@
+.forecast {
+    width: 100%;
+
+    &-boxes {
+        @include flex(space-around, center, null, null);
+        width: 100%;
+        padding: 5px;
+
+        @include mq(mobile) {
+            flex-direction: column;
+        }
+
+        .box {
+            @include flex(center, center, column, 5px);
+            width: 32%;
+            padding: 10px;
+            border-radius: 1rem;
+            background-color: white;
+
+            @include mq(mobile) {
+                flex-direction: row;
+                justify-content: space-between;
+                width: 100%;
+                background-color: #999966;
+
+            }
+
+            @include mq(desktopM) {
+                width: 30%;
+            }
+
+            @include mq(desktopL) {
+                width: 28%;
+            }
+
+            @include mq(4k) {
+                width: 28%;
+            }
+
+            .date {
+                font-size: 1.2rem;
+                font-weight: bold;
+
+                @include mq(mobile) {
+                    width: 50%;
+                    font-size: 2rem;
+                }
+
+                @include mq(desktopS) {
+                    font-size: 1.3rem;
+                }
+
+                @include mq(desktopM) {
+                    font-size: 1.4rem;
+                }
+
+                @include mq(desktopL) {
+                    font-size: 1.5rem;
+                }
+
+                @include mq(4k) {
+                    font-size: 1.6rem;
+                }
+            }
+
+            .temperature {
+                @include flex(center, center, null, null);
+                width: 100%;
+
+                @include mq(mobile) {
+                    justify-content: right;
+                    width: 50%;
+                    font-weight: bold;
+                }
+
+                @include mq(desktopS) {
+                    gap: 5px;
+                }
+
+                @include mq(desktopM) {
+                    gap: 10px
+                }
+
+                @include mq(desktopL) {
+                    gap: 15px;
+                }
+
+                @include mq(4k) {
+                    gap: 20px;
+                }
+
+                .slash {
+                    display: none;
+
+                    @include mq(mobile) {
+                        display: inline;
+                        font-size: 2rem;
+                    }
+                }
+
+                img {
+                    width: 2.5rem;
+                    height: 2.5rem;
+
+                    @include mq(mobile) {
+                        display: none;
+                    }
+
+                    @include mq(desktopS) {
+                        width: 2.6rem;
+                        height: 2.6rem;
+                    }
+
+                    @include mq(desktopM) {
+                        width: 2.7rem;
+                        height: 2.7rem;
+                    }
+
+                    @include mq(desktopL) {
+                        width: 2.8rem;
+                        height: 2.8rem;
+                    }
+
+                    @include mq(4k) {
+                        width: 2.9rem;
+                        height: 2.9rem;
+                    }
+                }
+
+                .max {
+                    font-size: 1.2rem;
+
+                    @include mq(mobile) {
+                        font-size: 2rem;
+                    }
+
+                    @include mq(desktopS) {
+                        font-size: 1.3rem;
+                    }
+
+                    @include mq(desktopM) {
+                        font-size: 1.4rem;
+                    }
+
+                    @include mq(desktopL) {
+                        font-size: 1.5rem;
+                    }
+
+                    @include mq(4k) {
+                        font-size: 1.6rem;
+                    }
+
+                    &-arrow {
+                        color: red;
+                        font-size: 1rem;
+
+                        @include mq(mobile) {
+                            display: none;
+                        }
+
+                        @include mq(desktopS) {
+                            font-size: 1.1rem;
+                        }
+
+                        @include mq(desktopM) {
+                            font-size: 1.2rem;
+                        }
+
+                        @include mq(desktopL) {
+                            font-size: 1.3rem;
+                        }
+
+                        @include mq(4k) {
+                            font-size: 1.4rem;
+                        }
+                    }
+                }
+
+                .min {
+                    font-size: 1.2rem;
+                    margin-left: 5px;
+
+                    @include mq(mobile) {
+                        font-size: 2rem;
+                    }
+
+                    @include mq(desktopS) {
+                        font-size: 1.3rem;
+                    }
+
+                    @include mq(desktopM) {
+                        font-size: 1.4rem;
+                    }
+
+                    @include mq(desktopL) {
+                        font-size: 1.5rem;
+                    }
+
+                    @include mq(4k) {
+                        font-size: 1.6rem;
+                    }
+
+                    &-arrow {
+                        color: green;
+                        font-size: 1rem;
+
+                        @include mq(mobile) {
+                            display: none;
+                        }
+
+                        @include mq(desktopS) {
+                            font-size: 1.1rem;
+                        }
+
+                        @include mq(desktopM) {
+                            font-size: 1.2rem;
+                        }
+
+                        @include mq(desktopL) {
+                            font-size: 1.3rem;
+                        }
+
+                        @include mq(4k) {
+                            font-size: 1.4rem;
+                        }
+                    }
+                }
+            }
+
+            .astro {
+                @include flex(center, center, null, 10px);
+                width: 100%;
+
+                @include mq(mobile) {
+                    display: none;
+                }
+
+                @include mq(desktopS) {
+                    gap: 15px;
+                }
+
+                @include mq(desktopM) {
+                    gap: 20px;
+                }
+
+                @include mq(desktopL) {
+                    gap: 25px;
+                }
+
+                @include mq(4k) {
+                    gap: 30px;
+                }
+
+                span {
+                    font-size: 1.2rem;
+
+                    @include mq(desktopS) {
+                        font-size: 1.3rem;
+                    }
+
+                    @include mq(desktopM) {
+                        font-size: 1.4rem;
+                    }
+
+                    @include mq(desktopL) {
+                        font-size: 1.5rem;
+                    }
+
+                    @include mq(4k) {
+                        font-size: 1.6rem;
+                    }
+
+                }
+
+                .sunrise {
+                    @include flex(center, center, column, 3px);
+
+                    &-icon {
+                        font-size: 1.5rem;
+                        color: yellow;
+
+                        @include mq(desktopS) {
+                            font-size: 1.6rem;
+                        }
+
+                        @include mq(desktopM) {
+                            font-size: 1.7rem;
+                        }
+
+                        @include mq(desktopL) {
+                            font-size: 1.8rem;
+                        }
+
+                        @include mq(4k) {
+                            font-size: 1.9rem;
+                        }
+                    }
+                }
+
+                .wind {
+                    @include flex(center, center, column, 3px);
+
+                    span {
+                        @include flex(center, center, null, 3px);
+                        color: gray;
+
+                        span {
+                            font-size: .8rem;
+
+                            @include mq(desktopS) {
+                                font-size: 1rem;
+                            }
+
+                            @include mq(desktopM) {
+                                font-size: 1.1rem;
+                            }
+
+                            @include mq(desktopL) {
+                                font-size: 1.2rem;
+                            }
+
+                            @include mq(4k) {
+                                font-size: 1.3rem;
+                            }
+                        }
+                    }
+
+                    &-icon {
+                        font-size: 1.5rem;
+                        color: lightblue;
+
+                        @include mq(desktopS) {
+                            font-size: 1.6rem;
+                        }
+
+                        @include mq(desktopL) {
+                            font-size: 1.7rem;
+                        }
+
+                        @include mq(4k) {
+                            font-size: 1.8rem;
+                        }
+                    }
+                }
+
+                .sunset {
+                    @include flex(center, center, column, 3px);
+
+                    &-icon {
+                        font-size: 1.5rem;
+                        color: orange;
+
+                        @include mq(desktopS) {
+                            font-size: 1.6rem;
+                        }
+
+                        @include mq(desktopM) {
+                            font-size: 1.7rem;
+                        }
+
+                        @include mq(desktopL) {
+                            font-size: 1.8rem;
+                        }
+
+                        @include mq(4k) {
+                            font-size: 1.9rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,14 @@
+.container {
+    @include flex(null, null, null, null);
+    background-color: $container;
+    min-height: 100vh;
+    font-family: $font;
+    padding: 20px;
+    cursor: pointer;
+
+    @include mq(mobile) {
+        @include flex(null, center, column, null);
+        padding: 0;
+    }
+
+}

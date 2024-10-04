@@ -1,0 +1,392 @@
+.left-side {
+    @include flex(space-between, center, column, null);
+    width: 25%;
+    background-color: $leftSide;
+    min-height: 100%;
+    padding: 10px;
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+
+    @include mq(mobile) {
+        gap: 10px;
+        width: 100%;
+        border-radius: 0;
+        background-color: #999966;
+        // border-bottom: 5px double black;
+    }
+
+    div {
+        width: 100%;
+        cursor: pointer;
+    }
+
+    .input-container {
+        @include flex(center, center, null, null);
+        height: 8%;
+        padding: 5px;
+
+        @include mq(mobile) {
+            height: 100%;
+        }
+
+        .input {
+            width: 90%;
+            height: 100%;
+            outline: none;
+            border: none;
+            padding: 5px;
+            font-size: 1.5rem;
+            background-color: transparent;
+
+            @include mq(mobile) {
+                width: 70%;
+                font-size: 2rem;
+            }
+
+            @include mq(desktopS) {
+                font-size: 1.6rem
+            }
+
+            @include mq(desktopM) {
+                font-size: 1.7rem;
+            }
+
+            @include mq(desktopL) {
+                font-size: 2rem;
+            }
+
+            @include mq(4k) {
+                font-size: 2.2rem;
+            }
+        }
+
+        .search-icon-container {
+            @include flex(center, center, null, null);
+            width: 10%;
+            height: 100%;
+
+            .search-icon {
+                font-size: 1.5rem;
+
+                @include mq(mobile) {
+                    font-size: 2rem;
+                }
+
+                @include mq(desktopL) {
+                    font-size: 1.8rem;
+                }
+
+                @include mq(4k) {
+                    font-size: 2rem;
+                }
+            }
+        }
+    }
+
+    .city-name {
+        @include flex(center, center, null, null);
+        font-size: 1.5rem;
+        font-weight: bold;
+        text-align: center;
+
+        @include mq(mobile) {
+            font-size: 2rem;
+            padding: 10px;
+        }
+
+        @include mq(desktopS) {
+            font-size: 1.6rem;
+        }
+
+        @include mq(desktopL) {
+            font-size: 1.7rem;
+        }
+
+        @include mq(4k) {
+            font-size: 1.8rem;
+        }
+    }
+
+    .img {
+        @include flex(center, center, column, null);
+        width: 100%;
+        height: 100%;
+
+        @include mq(mobile) {
+            @include flex(center, center, column, null);
+            width: 50%;
+        }
+
+        img {
+            @include img();
+        }
+
+        @include mq(desktopL) {
+            width: 60%
+        }
+
+        @include mq(4k) {
+            width: 60%
+        }
+
+        .weather-status {
+            @include flex(center, center, null, null);
+            font-size: 1.5rem;
+            font-weight: bold;
+
+            @include mq(mobile) {
+                font-size: 2rem;
+            }
+
+            @include mq(desktopS) {
+                font-size: 1.6rem;
+            }
+
+            @include mq(desktopM) {
+                font-size: 1.7rem;
+            }
+
+            @include mq(desktopL) {
+                font-size: 1.8rem;
+            }
+
+            @include mq(4k) {
+                font-size: 1.9rem;
+            }
+        }
+
+    }
+
+    .degree {
+        @include flex(center, center, null, null);
+
+        span {
+            font-size: 5rem;
+
+            @include mq(mobile) {
+                font-size: 7rem;
+            }
+
+            @include mq(desktopL) {
+                font-size: 7rem;
+            }
+
+            @include mq(4k) {
+                font-size: 8rem;
+            }
+        }
+
+        div {
+            height: 100%;
+            width: fit-content;
+            font-size: 2rem;
+
+            @include mq(mobile) {
+                font-size: 4rem;
+            }
+
+            @include mq(desktopL) {
+                font-size: 3rem;
+            }
+
+            @include mq(4k) {
+                font-size: 4rem;
+            }
+
+            .degree-icon {
+                margin-top: 10px;
+            }
+        }
+    }
+
+    .max-and-min {
+        @include flex(space-around, center, null, 5px);
+        font-size: 1.2rem;
+        flex-wrap: wrap;
+
+        @include mq(mobile) {
+            display: none;
+        }
+
+        @include mq(desktopS) {
+            font-size: 1.3rem;
+        }
+
+        @include mq(desktopM) {
+            font-size: 1.5rem;
+        }
+
+        @include mq(desktopL) {
+            font-size: 1.7rem;
+        }
+
+        @include mq(4k) {
+            font-size: 1.9rem;
+        }
+
+        span {
+            span {
+                color: gray;
+                font-size: 1.2rem;
+
+                @include mq(desktopS) {
+                    font-size: 1.3rem;
+                }
+
+                @include mq(desktopM) {
+                    font-size: 1.5rem;
+                }
+
+                @include mq(desktopL) {
+                    font-size: 1.7rem;
+                }
+
+                @include mq(4k) {
+                    font-size: 1.9rem;
+                }
+
+                .degree-icon {
+                    font-size: .8rem;
+
+                    @include mq(desktopS) {
+                        font-size: .9rem
+                    }
+
+                    @include mq(desktopM) {
+                        font-size: 1.2rem;
+                    }
+
+                    @include mq(desktopL) {
+                        font-size: 1.4rem;
+                    }
+
+                    @include mq(4k) {
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .infos {
+        @include flex(center, center, column, 20px);
+        padding: 10px;
+
+        @include mq(mobile) {
+            display: none;
+        }
+
+        .time {
+            @include flex(null, center, null, 5px);
+            font-size: 1.2rem;
+
+            @include mq(desktopS) {
+                font-size: 1.3rem;
+            }
+
+            @include mq(desktopM) {
+                font-size: 1.5rem;
+            }
+
+            @include mq(desktopL) {
+                font-size: 1.6rem;
+            }
+
+            @include mq(4k) {
+                font-size: 1.7rem;
+            }
+
+            .date-icon {
+                color: orange;
+            }
+
+            span {
+                span {
+                    color: gray;
+                }
+            }
+        }
+
+        .feels-like {
+            @include flex(null, center, null, 5px);
+            font-size: 1.2rem;
+
+            @include mq(desktopS) {
+                font-size: 1.3rem;
+            }
+
+            @include mq(desktopM) {
+                font-size: 1.5rem;
+            }
+
+            @include mq(desktopL) {
+                font-size: 1.6rem;
+            }
+
+            @include mq(4k) {
+                font-size: 1.7rem;
+            }
+
+            .smile-icon {
+                color: red;
+            }
+
+            span {
+                span {
+                    color: gray;
+
+                    .temp-icon {
+                        font-size: .8rem;
+
+                        @include mq(desktopS) {
+                            font-size: 1rem
+                        }
+
+                        @include mq(desktopM) {
+                            font-size: 1.2rem
+                        }
+
+                        @include mq(desktopL) {
+                            font-size: 1.4rem
+                        }
+
+                        @include mq(4k) {
+                            font-size: 1.6rem
+                        }
+                    }
+                }
+            }
+        }
+
+        .rain-chance {
+            @include flex(null, center, null, 5px);
+            font-size: 1.2rem;
+
+            @include mq(desktopS) {
+                font-size: 1.3rem;
+            }
+
+            @include mq(desktopM) {
+                font-size: 1.5rem;
+            }
+
+            @include mq(desktopL) {
+                font-size: 1.6rem;
+            }
+
+            @include mq(4k) {
+                font-size: 1.7rem;
+            }
+
+            .rain-icon {
+                color: blue;
+            }
+
+            span {
+                span {
+                    color: gray;
+                }
+            }
+        }
+    }
+}

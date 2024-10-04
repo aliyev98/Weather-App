@@ -1,0 +1,261 @@
+   .hourly {
+       @include flex(center, center, null, null);
+       width: 100%;
+       padding: 10px;
+
+       &-boxes {
+           @include flex(center, center, null, 5px);
+           overflow: hidden;
+           width: 100%;
+
+           .box {
+               display: flex !important;
+               justify-content: center !important;
+               align-items: center !important;
+               flex-direction: column !important;
+               gap: 3px !important;
+               border-radius: 1rem;
+               padding: 10px;
+               width: fit-content !important;
+               height: fit-content !important;
+               transition: transform 0.2s ease-in;
+               background-color: white;
+
+               @include mq(mobile) {
+                   background-color: #7a7a52;
+               }
+
+               @include mq(desktopS) {
+                   gap: 5px !important;
+               }
+
+               @include mq(desktopM) {
+                   gap: 5px !important;
+               }
+
+               @include mq(desktopL) {
+                   gap: 5px !important;
+               }
+
+               @include mq(4k) {
+                   gap: 5px !important;
+               }
+
+               div {
+                   @include flex(center, center, null, null);
+                   width: 100%;
+               }
+
+               .hour {
+                   font-weight: bold;
+                   gap: 1px;
+
+                   @include mq(mobile) {
+                       font-size: 1.5rem;
+                   }
+
+                   @include mq(desktopS) {
+                       font-size: 1.2rem;
+                   }
+
+                   @include mq(desktopM) {
+                       font-size: 1.3rem;
+                   }
+
+                   @include mq(desktopL) {
+                       font-size: 1.4rem;
+                   }
+
+                   @include mq(4k) {
+                       font-size: 1.5rem;
+                   }
+
+                   .clock-icon {
+                       color: blue;
+                       font-size: .8rem;
+
+                       @include mq(mobile) {
+                           font-size: 1.2rem;
+                       }
+
+                       @include mq(desktopS) {
+                           font-size: 1rem;
+                       }
+
+                       @include mq(desktopM) {
+                           font-size: 1.1rem;
+                       }
+
+                       @include mq(desktopL) {
+                           font-size: 1.2rem;
+                       }
+
+                       @include mq(4k) {
+                           font-size: 1.3rem;
+                       }
+                   }
+
+               }
+
+               .temperature {
+                   color: gray;
+
+                   @include mq(mobile) {
+                       font-size: 1.5rem;
+                       color: white;
+                   }
+
+                   @include mq(desktopS) {
+                       font-size: 1.2rem;
+                   }
+
+                   @include mq(desktopM) {
+                       font-size: 1.3rem;
+                   }
+
+                   @include mq(desktopL) {
+                       font-size: 1.4rem;
+                   }
+
+                   @include mq(4k) {
+                       font-size: 1.5rem;
+                   }
+
+                   .temp-icon {
+                       color: red;
+                       margin-left: .2rem;
+                       font-size: .8rem;
+
+                       @include mq(mobile) {
+                           font-size: 1.2rem;
+                       }
+
+                       @include mq(desktopS) {
+                           font-size: 1rem;
+                       }
+
+                       @include mq(desktopM) {
+                           font-size: 1.1rem;
+                       }
+
+                       @include mq(desktopL) {
+                           font-size: 1.2rem;
+                       }
+
+                       @include mq(4k) {
+                           font-size: 1.3rem;
+                       }
+                   }
+
+                   .degree-icon {
+                       font-size: 1.5rem;
+
+                       @include mq(mobile) {
+                           font-size: 1.8rem;
+                       }
+
+                       @include mq(desktopS) {
+                           font-size: 1.7rem;
+                       }
+
+                       @include mq(desktopM) {
+                           font-size: 1.8rem;
+                       }
+
+                       @include mq(desktopL) {
+                           font-size: 1.9rem;
+                       }
+
+                       @include mq(4k) {
+                           font-size: 2rem;
+                       }
+                   }
+               }
+
+               img {
+                   width: 2rem;
+                   height: 2rem;
+
+                   @include mq(mobile) {
+                       width: 3rem;
+                       height: 3rem;
+                   }
+
+                   @include mq(desktopS) {
+                       width: 2.2rem;
+                       height: 2.2rem;
+                   }
+
+                   @include mq(desktopM) {
+                       width: 2.4rem;
+                       height: 2.4rem;
+                   }
+
+                   @include mq(desktopL) {
+                       width: 2.6rem;
+                       height: 2.6rem;
+                   }
+
+                   @include mq(4k) {
+                       width: 2.8rem;
+                       height: 2.8rem;
+                   }
+               }
+
+               .wind-speed {
+                   color: gray;
+                   font-size: .9rem;
+
+                   span {
+                       font-size: .8rem;
+
+                       @include mq(mobile){
+                        font-size: 1rem;
+                        color: white;
+                       }
+
+                       @include mq(desktopS) {
+                           font-size: .9rem;
+                       }
+
+                       @include mq(desktopM) {
+                           font-size: 1rem;
+                       }
+
+                       @include mq(desktopL) {
+                           font-size: 1.1rem;
+                       }
+
+                       @include mq(4k) {
+                           font-size: 1.2rem;
+                       }
+                   }
+
+                   @include mq(mobile){
+                    font-size: 1.4rem;
+                    color: white;
+                   }
+
+                   @include mq(desktopS) {
+                       font-size: 1.1rem;
+                   }
+
+                   @include mq(desktopM) {
+                       font-size: 1.2rem;
+                   }
+
+                   @include mq(desktopL) {
+                       font-size: 1.3rem;
+                   }
+
+                   @include mq(4k) {
+                       font-size: 1.4rem;
+                   }
+
+                   .wind-icon {
+                       color: lightblue;
+                   }
+               }
+           }
+       }
+   }

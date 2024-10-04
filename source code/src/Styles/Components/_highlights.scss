@@ -1,0 +1,486 @@
+.highlights {
+    width: 100%;
+
+    .boxes {
+        @include flex(center, center, null, 10px);
+        flex-wrap: wrap;
+        width: 100%;
+        height: 100%;
+
+        @include mq(mobile) {
+            padding-bottom: 10px;
+        }
+
+        .box {
+            @include flex(space-around, center, column, 3px);
+            width: 20%;
+            height: 45%;
+            background-color: white;
+            padding: 10px;
+            border-radius: 1rem;
+
+            @include mq(mobile) {
+                background-color: #7a7a52;
+                height: 80px;
+            }
+
+            @include mq(desktopS) {
+                padding: 5px;
+            }
+
+            .title {
+                font-size: .8rem;
+                font-weight: bold;
+                text-align: center;
+
+                @include mq(mobile) {
+                    color: white;
+                }
+
+                @include mq(desktopS) {
+                    font-size: 1.1rem;
+                }
+
+                @include mq(desktopM) {
+                    font-size: 1.3rem;
+                }
+
+                @include mq(desktopL) {
+                    font-size: 1.5rem;
+                }
+
+                @include mq(4k) {
+                    font-size: 1.7rem;
+                }
+            }
+
+            span {
+                color: gray;
+
+                @include mq(mobile) {
+                    color: white;
+                }
+            }
+        }
+
+        .uv-index {
+
+            .uv-icon {
+                font-size: 2.5rem;
+                color: orange;
+
+                @include mq(desktopM) {
+                    font-size: 4rem;
+                }
+
+                @include mq(desktopL) {
+                    font-size: 5.5rem;
+                }
+
+                @include mq(4k) {
+                    font-size: 7rem;
+                }
+            }
+
+            .uv-value {
+                font-size: 1.8rem;
+
+                @include mq(mobile) {
+                    font-size: 1.5rem;
+                }
+
+                @include mq(desktopM) {
+                    font-size: 2rem;
+                }
+
+                @include mq(desktopL) {
+                    font-size: 2.2rem;
+                }
+
+                @include mq(4k) {
+                    font-size: 2.4rem;
+                }
+            }
+        }
+
+        .wind-status {
+
+            .wind-icon {
+                font-size: 2.5rem;
+                color: lightblue;
+
+                @include mq(mobile) {
+                    font-size: 1.8rem;
+                }
+
+                @include mq(desktopM) {
+                    font-size: 2.2rem;
+                }
+
+                @include mq(desktopL) {
+                    font-size: 2.4rem;
+                }
+
+                @include mq(4k) {
+                    font-size: 2.6rem;
+                }
+            }
+
+            .wind-value {
+                font-size: 1.4rem;
+
+                @include mq(mobile) {
+                    font-size: 1.2rem;
+                }
+
+                @include mq(desktopM) {
+                    font-size: 1.8rem;
+                }
+
+                @include mq(desktopL) {
+                    font-size: 2rem;
+                }
+
+                @include mq(4k) {
+                    font-size: 2.2rem;
+                }
+
+                span {
+                    font-size: 1rem;
+
+                    @include mq(mobile){
+                        font-size: .8rem;
+                    }
+
+                    @include mq(desktopM) {
+                        font-size: 1.2rem;
+                    }
+
+                    @include mq(desktopL) {
+                        font-size: 1.4rem;
+                    }
+
+                    @include mq(4k) {
+                        font-size: 1.6rem;
+                    }
+                }
+            }
+        }
+
+        .sun {
+            .sunset {
+                width: 100%;
+                @include flex(center, center, null, 5px);
+            }
+
+            .sunrise {
+                width: 100%;
+                @include flex(center, center, null, 5px);
+
+            }
+
+            span {
+                font-size: 1.2rem;
+
+                @include mq(mobile) {
+                    font-size: 1rem;
+                }
+
+                @include mq(desktopM) {
+                    font-size: 1.4rem;
+                }
+
+                @include mq(desktopL) {
+                    font-size: 1.6rem;
+                }
+
+                @include mq(4k) {
+                    font-size: 1.8rem;
+                }
+            }
+
+            .sunrise-icon {
+                color: yellow;
+                font-size: 2rem;
+
+                @include mq(desktopM) {
+                    font-size: 2.2rem;
+                }
+
+                @include mq(desktopL) {
+                    font-size: 2.4rem;
+                }
+
+                @include mq(4k) {
+                    font-size: 2.6rem;
+                }
+            }
+
+            .sunset-icon {
+                color: orange;
+                font-size: 2rem;
+
+                @include mq(desktopM) {
+                    font-size: 2.2rem;
+                }
+
+                @include mq(desktopL) {
+                    font-size: 2.4rem;
+                }
+
+                @include mq(4k) {
+                    font-size: 2.6rem;
+                }
+            }
+        }
+
+        .humidity {
+            &-icon {
+                font-size: 3rem;
+                color: blue;
+
+                @include mq(mobile) {
+                    font-size: 2.5rem;
+                }
+
+                @include mq(desktopM) {
+                    font-size: 3.5rem;
+                }
+
+                @include mq(desktopL) {
+                    font-size: 4rem;
+                }
+
+                @include mq(4k) {
+                    font-size: 4.5rem;
+                }
+            }
+
+            .humidity-value {
+                font-size: 1.4rem;
+
+                @include mq(desktopM) {
+                    font-size: 1.8rem;
+                }
+
+                @include mq(desktopL) {
+                    font-size: 2rem;
+                }
+
+                @include mq(4k) {
+                    font-size: 2.2rem;
+                }
+            }
+        }
+
+        .visibility {
+
+            &-icon {
+                font-size: 3rem;
+                color: red;
+            }
+
+            .visibility-value {
+                font-size: 1.8rem;
+
+                @include mq(mobile){
+                    font-size: 1.5rem;
+                }
+
+                @include mq(desktopM) {
+                    font-size: 2rem;
+                }
+
+                @include mq(desktopL) {
+                    font-size: 2.2rem;
+                }
+
+                @include mq(4k) {
+                    font-size: 2.4rem;
+                }
+
+                span {
+                    font-size: 1.2rem;
+
+                    @include mq(mobile){
+                        font-size: 1rem;
+                    }
+
+                    @include mq(desktopM) {
+                        font-size: 1.4rem;
+                    }
+
+                    @include mq(desktopL) {
+                        font-size: 1.6rem;
+                    }
+
+                    @include mq(4k) {
+                        font-size: 1.8rem;
+                    }
+                }
+            }
+        }
+
+        .air-quality {
+
+            .quality-icon {
+                color: green;
+                font-size: 1.2rem;
+
+                @include mq(mobile) {
+                    font-size: 2rem;
+                }
+
+                @include mq(desktopM) {
+                    font-size: 2rem;
+                }
+
+                @include mq(desktopL) {
+                    font-size: 2.8rem;
+                }
+
+                @include mq(4k) {
+                    font-size: 3.6rem;
+                }
+            }
+
+            span {
+                font-size: .8rem;
+
+                @include mq(mobile) {
+                    font-size: .7rem;
+                }
+
+                @include mq(desktopM) {
+                    font-size: 1rem;
+                }
+
+                @include mq(desktopL) {
+                    font-size: 1.2rem;
+                }
+
+                @include mq(4k) {
+                    font-size: 1.4rem;
+                }
+
+            }
+        }
+
+        .pressure {
+
+            &-icon {
+                font-size: 2.5rem;
+                color: darkslategrey;
+
+                @include mq(mobile){
+                    font-size: 2rem;
+                }
+
+                @include mq(desktopM) {
+                    font-size: 3rem;
+                }
+
+                @include mq(desktopL) {
+                    font-size: 3.5rem;
+                }
+
+                @include mq(4k) {
+                    font-size: 4rem;
+                }
+            }
+
+            .pressure-value {
+                font-size: 1.4rem;
+
+                @include mq(mobile) {
+                    font-size: 1rem;
+                }
+
+                @include mq(desktopM) {
+                    font-size: 1.8rem;
+                }
+
+                @include mq(desktopL) {
+                    font-size: 2.2rem;
+                }
+
+                @include mq(4k) {
+                    font-size: 2.6rem;
+                }
+
+                span {
+                    font-size: 1.2rem;
+
+                    @include mq(mobile) {
+                        font-size: .8rem;
+                    }
+
+                    @include mq(desktopM) {
+                        font-size: 1.4rem;
+                    }
+
+                    @include mq(desktopL) {
+                        font-size: 1.6rem;
+                    }
+
+                    @include mq(4k) {
+                        font-size: 1.8rem;
+                    }
+                }
+            }
+        }
+
+        .dewpoint {
+
+
+            &-icon {
+                font-size: 2rem;
+                color: black;
+
+                @include mq(desktopM) {
+                    font-size: 2.8rem;
+                }
+
+                @include mq(desktopL) {
+                    font-size: 3.6rem;
+                }
+
+                @include mq(4k) {
+                    font-size: 4.2rem;
+                }
+            }
+
+            .dewpoint-value {
+                font-size: 1.4rem;
+
+                @include mq(desktopM) {
+                    font-size: 2rem;
+                }
+
+                @include mq(desktopL) {
+                    font-size: 2.4rem;
+                }
+
+                @include mq(4k) {
+                    font-size: 2.8rem;
+                }
+
+                .degree-icon {
+                    font-size: 1rem;
+
+                    @include mq(desktopM) {
+                        font-size: 2rem;
+                    }
+
+                    @include mq(desktopL) {
+                        font-size: 3rem;
+                    }
+
+                    @include mq(4k) {
+                        font-size: 4rem;
+                    }
+                }
+            }
+        }
+    }
+}
